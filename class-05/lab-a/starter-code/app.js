@@ -95,10 +95,8 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
-  var sumResult = 0;
-  for (var i = 0; i < sumArr.length; i++) {
-    sumResult += sumArr[i];
-  }
+  var sum_0_1_Indexs = sum(sumArr[0], sumArr[1])[0];
+  var sumResult = sum(sum_0_1_Indexs, sumArr[2])[0];
   //   Sorry I just have To use it
   var msg = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumResult} is their sum.`;
   return [sumResult, msg];
