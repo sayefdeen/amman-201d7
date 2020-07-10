@@ -121,16 +121,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
-  var multiResult = 1;
-  for (var i = 0; i < multArr.length; i++) {
-    multiResult = multiResult * multArr[i];
-  }
+  var mult_0_1_Indexs = multiply(multArr[0], multArr[1])[0];
+  var multiResult = multiply(mult_0_1_Indexs, multArr[2])[0];
   var msg = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiResult}.`;
   return [multiResult, msg];
-
-  var result = dynamicArray.reduce((a, b) => a * b, 1);
-  var msg = `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${result}.`;
-  return [result, msg];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
