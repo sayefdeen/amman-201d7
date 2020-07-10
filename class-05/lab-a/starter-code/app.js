@@ -55,9 +55,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-  var sumResult = a + b + c;
-  var multiResult = a * b * c;
-  var sumMsg = a + " and " + b + " and " + c + " sum to " + sumResult + ".";
+  // var sumResult = a + b + c;
+  // var multiResult = a * b * c;
+  var sum_a_b = sum(a, b)[0];
+  var totalSum = sum(sum_a_b, c)[0];
+  var mult_a_b = multiply(a, b)[0];
+  var totalMult = multiply(mult_a_b, c)[0];
+  var sumMsg = a + " and " + b + " and " + c + " sum to " + totalSum + ".";
   var multiMsg =
     "The product of " +
     a +
@@ -66,9 +70,9 @@ function sumAndMultiply(a, b, c) {
     " and " +
     c +
     " is " +
-    multiResult +
+    totalMult +
     ".";
-  return [sumResult, multiResult, sumMsg, multiMsg];
+  return [totalSum, totalMult, sumMsg, multiMsg];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
